@@ -35,6 +35,7 @@ const theme = createTheme({
       root: {
         backgroundColor: 'hsl(244, 38%, 16%)',
         borderRadius: '.5rem',
+        boxShadow: 'none',
       },
     },
     MuiGrid: {

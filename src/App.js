@@ -36,13 +36,13 @@ function App() {
                 efficiency.
               </Typography>
               <Grid container>
-                <Grid container item>
+                <Grid item>
                   <Stats stats='10k+' title='companies' />
                 </Grid>
-                <Grid container item>
+                <Grid item>
                   <Stats stats='314' title='templates' />
                 </Grid>
-                <Grid container item>
+                <Grid item>
                   <Stats stats='12M+' title='queries' />
                 </Grid>
               </Grid>

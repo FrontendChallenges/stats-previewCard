@@ -4,10 +4,13 @@ import { Grid, Container, Typography } from '@material-ui/core';
 import theme from './style/theme';
 import PreviewCard from './components/PreviewCard';
 
-const useStyles = makeStyles({
-  container: {
-    height: '100vh',
-  },
+const useStyles = makeStyles((theme) => {
+  return {
+    container: {
+      height: '100vh',
+    },
+    span: { color: 'hsl(277, 64%, 61%)' },
+  };
 });
 
 function App() {
@@ -25,7 +28,8 @@ function App() {
           >
             <PreviewCard alt='team meeting image'>
               <Typography variant='h2' component='h1'>
-                Get insights that help your business grow.
+                Get <span className={classes.span}>insights</span> that help
+                your business grow.
               </Typography>
             </PreviewCard>
           </Grid>

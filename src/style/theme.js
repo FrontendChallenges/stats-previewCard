@@ -29,7 +29,7 @@ const theme = createTheme({
       fontSize: 15,
     },
   },
-
+  spacing: 10,
   overrides: {
     MuiCard: {
       root: {

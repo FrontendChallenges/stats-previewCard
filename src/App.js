@@ -35,7 +35,7 @@ function App() {
                 decisions regarding revenue, customer experience, and overall
                 efficiency.
               </Typography>
-              <Grid container spacing={10}>
+              <Grid container spacing={8}>
                 <Grid item>
                   <Stats stats='10k+' title='companies' />
                 </Grid>

@@ -18,14 +18,16 @@ const theme = createTheme({
     fontWeightMedium: 700,
     h1: { fontWeight: 700 },
     h2: { fontWeight: 700 },
+    body1: {
+      fontWeight: 400,
+      fontSize: 15,
+    },
   },
 
   overrides: {
     MuiCard: {
       root: {
         backgroundColor: 'hsl(244, 38%, 16%)',
-      },
-      rounded: {
         borderRadius: '.5rem',
       },
     },

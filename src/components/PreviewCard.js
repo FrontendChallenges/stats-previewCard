@@ -1,27 +1,27 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, CardMedia } from '@material-ui/core';
-import headerImg from '../images/image-header-desktop.jpg';
+import { Card, CardContent } from '@material-ui/core';
+import ImgMedia from './ImgMedia';
 
 const useStyles = makeStyles((theme) => {
   return {
     root: {
       display: 'flex',
     },
-    media: {
-      width: '100%',
-      backgroundImage: `linear-gradient(to right,${theme.palette.primary.main}  100%, ${theme.palette.primary.main} 100% ),url(${headerImg})`,
-      backgroundBlendMode: 'multiply',
+    content: {
+      '& > *': {
+        marginBottom: '2.5rem',
+      },
     },
   };
 });
 
-function PreviewCard({ children, img, alt }) {
+function PreviewCard({ children, className, img }) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardContent>{children}</CardContent>
-      <CardMedia alt={alt} className={classes.media} />
+      <CardContent className={classes.content}>{children}</CardContent>
+      <ImgMedia className={className} img={img} alt='team meeting image' />
     </Card>
   );
 }

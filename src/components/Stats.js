@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => {
 function Stats({ stats, title }) {
   const classes = useStyles();
   return (
-    <Box mr={8} mt={7}>
+    <Box>
       <Typography variant='h4' component='h2' color='secondary'>
         {stats}
       </Typography>

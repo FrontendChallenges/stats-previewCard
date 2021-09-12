@@ -9,8 +9,12 @@ const useStyles = makeStyles((theme) => {
       display: 'flex',
     },
     content: {
-      '& > *': {
-        marginBottom: '2.5rem',
+      padding: '6rem',
+      '& > *:not(:last-child)': {
+        marginBottom: '3rem',
+      },
+      '& > :last-child': {
+        marginTop: '3rem',
       },
     },
   };

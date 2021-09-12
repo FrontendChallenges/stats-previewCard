@@ -23,7 +23,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <main>
-        <Container maxWidth='md'>
+        <Container maxWidth='lg'>
           <Grid container justifyContent='center' alignContent='center' item>
             <PreviewCard img={headerImg} className={classes.media}>
               <Typography variant='h2' component='h1' color='secondary'>
@@ -35,7 +35,7 @@ function App() {
                 decisions regarding revenue, customer experience, and overall
                 efficiency.
               </Typography>
-              <Grid container>
+              <Grid container spacing={10}>
                 <Grid item>
                   <Stats stats='10k+' title='companies' />
                 </Grid>

@@ -3,11 +3,13 @@ import { createTheme } from '@material-ui/core';
 const theme = createTheme({
   palette: {
     primary: { main: 'hsl(277, 64%, 61%)' },
-    secondary: { main: 'hsl(244, 38%, 16%)' },
+    secondary: { main: 'hsl(0, 0%, 100%)' },
     text: {
-      primary: 'hsl(0, 0%, 100%)',
-      secondary: 'hsla(0, 0%, 100%, 0.75)',
-      hint: 'hsla(0, 0%, 100%, 0.6)',
+      primary: 'hsla(0, 0%, 100%, 0.75)',
+      secondary: 'hsla(0, 0%, 100%, 0.6)',
+    },
+    background: {
+      default: 'hsl(244, 38%, 16%)',
     },
   },
 
@@ -18,8 +20,12 @@ const theme = createTheme({
     fontWeightMedium: 700,
     h1: { fontWeight: 700 },
     h2: { fontWeight: 700 },
+    h4: { fontWeight: 700 },
+    subtitle1: {
+      fontFamily: "'Lexend Deca', 'sans-serif'",
+      fontSize: 15,
+    },
     body1: {
-      fontWeight: 400,
       fontSize: 15,
     },
   },
@@ -29,6 +35,11 @@ const theme = createTheme({
       root: {
         backgroundColor: 'hsl(244, 38%, 16%)',
         borderRadius: '.5rem',
+      },
+    },
+    MuiGrid: {
+      container: {
+        // height: '100%',
       },
     },
   },

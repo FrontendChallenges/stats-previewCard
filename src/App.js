@@ -4,12 +4,10 @@ import { Grid, Container, Typography } from '@material-ui/core';
 import theme from './style/theme';
 import PreviewCard from './components/PreviewCard';
 import headerImg from './images/image-header-desktop.jpg';
+import Stats from './components/Stats';
 
 const useStyles = makeStyles((theme) => {
   return {
-    container: {
-      height: '100vh',
-    },
     span: { color: 'hsl(277, 64%, 61%)' },
     media: {
       width: '100%',
@@ -26,23 +24,28 @@ function App() {
     <ThemeProvider theme={theme}>
       <main>
         <Container maxWidth='md'>
-          <Grid
-            container
-            justifyContent='center'
-            alignContent='center'
-            className={classes.container}
-            item
-          >
+          <Grid container justifyContent='center' alignContent='center' item>
             <PreviewCard img={headerImg} className={classes.media}>
-              <Typography variant='h2' component='h1'>
+              <Typography variant='h2' component='h1' color='secondary'>
                 Get <span className={classes.span}>insights</span> that help
                 your business grow.
               </Typography>
-              <Typography variant='body1' color='textSecondary'>
+              <Typography variant='body1' color='textPrimary'>
                 Discover the benefits of data analytics and make better
                 decisions regarding revenue, customer experience, and overall
                 efficiency.
               </Typography>
+              <Grid container>
+                <Grid container item>
+                  <Stats stats='10k+' title='companies' />
+                </Grid>
+                <Grid container item>
+                  <Stats stats='314' title='templates' />
+                </Grid>
+                <Grid container item>
+                  <Stats stats='12M+' title='queries' />
+                </Grid>
+              </Grid>
             </PreviewCard>
           </Grid>
         </Container>

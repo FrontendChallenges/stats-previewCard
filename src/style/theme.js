@@ -38,11 +38,7 @@ const theme = createTheme({
         boxShadow: 'none',
       },
     },
-    MuiGrid: {
-      container: {
-        // height: '100%',
-      },
-    },
+    MuiContainer: { root: { height: '100vh', display: 'flex' } },
   },
 });
 

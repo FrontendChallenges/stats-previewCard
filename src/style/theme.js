@@ -1,6 +1,15 @@
 import { createTheme } from '@material-ui/core';
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 768,
+      lg: 992,
+      xl: 1200,
+    },
+  },
   palette: {
     primary: { main: 'hsl(277, 64%, 61%)' },
     secondary: { main: 'hsl(0, 0%, 100%)' },
@@ -18,8 +27,7 @@ const theme = createTheme({
     fontSize: 15,
     fontWeightRegular: 400,
     fontWeightMedium: 700,
-    h1: { fontWeight: 700 },
-    h2: { fontWeight: 700 },
+    h3: { fontWeight: 700 },
     h4: { fontWeight: 700 },
     subtitle1: {
       fontFamily: "'Lexend Deca', 'sans-serif'",
@@ -38,7 +46,13 @@ const theme = createTheme({
         boxShadow: 'none',
       },
     },
-    MuiContainer: { root: { height: '100vh', display: 'flex' } },
+    MuiContainer: {
+      root: {
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+      },
+    },
   },
 });
 

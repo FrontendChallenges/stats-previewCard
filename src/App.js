@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
-import { Grid, Container, Typography, Card } from '@material-ui/core';
+import { Grid, Container, Typography } from '@material-ui/core';
 import theme from './style/theme';
 import PreviewCard from './components/PreviewCard';
 import headerImg from './images/image-header-desktop.jpg';
@@ -36,22 +36,24 @@ function App() {
                     overall efficiency.
                   </Typography>
                 </Grid>
-                <Grid item>
-                  <Grid container spacing={5}>
-                    <Grid item>
-                      <Stats stats='10k+' title='companies' />
-                    </Grid>
-                    <Grid item>
-                      <Stats stats='314' title='templates' />
-                    </Grid>
-                    <Grid item>
-                      <Stats stats='12M+' title='queries' />
-                    </Grid>
+                <Grid item container spacing={5}>
+                  <Grid item>
+                    <Stats stats='10k+' title='companies' />
+                  </Grid>
+                  <Grid item>
+                    <Stats stats='314' title='templates' />
+                  </Grid>
+                  <Grid item>
+                    <Stats stats='12M+' title='queries' />
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid container item>
-                <ImgMedia className={classes.mediaImg} img={headerImg} />
+              <Grid container item className={classes.imgBox}>
+                <ImgMedia
+                  className={classes.mediaImg}
+                  img={headerImg}
+                  alt='team meeting picture'
+                />
               </Grid>
             </PreviewCard>
           </Grid>

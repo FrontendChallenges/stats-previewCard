@@ -3,6 +3,7 @@ import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import { Grid, Container, Typography } from '@material-ui/core';
 import theme from './style/theme';
 import PreviewCard from './components/PreviewCard';
+import Footer from './components/Footer';
 import headerImg from './images/image-header-desktop.jpg';
 import Stats from './components/Stats';
 import ImgMedia from './components/ImgMedia';
@@ -12,6 +13,11 @@ const useStyles = makeStyles({
   mediaImg: {
     backgroundImage: `linear-gradient(to right,hsl(277, 64%, 61%)  100%, hsl(277, 64%, 61%) 100% ),url(${headerImg})`,
   },
+  mainContainer: {
+    [theme.breakpoints.up('md')]: {
+      justifyContent: 'center',
+    },
+  },
 });
 
 function App() {
@@ -19,8 +25,8 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <main>
-        <Container maxWidth='xl'>
+      <Container maxWidth='xl' className={classes.mainContainer}>
+        <main>
           <PreviewCard>
             <Grid container item>
               <Grid item>
@@ -56,8 +62,9 @@ function App() {
               />
             </Grid>
           </PreviewCard>
-        </Container>
-      </main>
+        </main>
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 }

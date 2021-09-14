@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => {
     },
     card: {
       display: 'flex',
+      [theme.breakpoints.down('sm')]: {
+        flexDirection: 'column-reverse',
+      },
       // Preview cotent - title and subtitle
       '& >:first-child': {
         padding: theme.spacing(7),
@@ -44,15 +47,11 @@ const useStyles = makeStyles((theme) => {
           },
         },
       },
-
-      [theme.breakpoints.down('sm')]: {
-        flexDirection: 'column-reverse',
-      },
     },
   };
 });
 
-function PreviewCard({ children, className, img }) {
+function PreviewCard({ children }) {
   const classes = useStyles();
 
   return (

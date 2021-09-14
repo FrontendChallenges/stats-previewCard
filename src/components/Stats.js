@@ -2,12 +2,10 @@ import React from 'react';
 import { Typography, Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => {
-  return {
-    subtitle: {
-      textTransform: 'uppercase',
-    },
-  };
+const useStyles = makeStyles({
+  subtitle: {
+    textTransform: 'uppercase',
+  },
 });
 
 function Stats({ stats, title }) {

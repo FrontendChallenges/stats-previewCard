@@ -1,12 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card } from '@material-ui/core';
+import { Card, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => {
   return {
+    container: {
+      alignSelf: 'center',
+      [theme.breakpoints.down('sm')]: {
+        alignSelf: 'flex-start',
+        padding: '6rem 0',
+      },
+    },
     card: {
       display: 'flex',
-
+      // Preview cotent - title and subtitle
       '& >:first-child': {
         padding: theme.spacing(7),
         [theme.breakpoints.down('md')]: {
@@ -27,11 +34,13 @@ const useStyles = makeStyles((theme) => {
           },
         },
 
+        // Preview cotent - stats
         '&>:last-child': {
           paddingTop: theme.spacing(4),
 
           [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
+            paddingBottom: theme.spacing(2),
           },
         },
       },
@@ -45,7 +54,12 @@ const useStyles = makeStyles((theme) => {
 
 function PreviewCard({ children, className, img }) {
   const classes = useStyles();
-  return <Card className={classes.card}>{children}</Card>;
+
+  return (
+    <Grid container className={classes.container}>
+      <Card className={classes.card}>{children}</Card>
+    </Grid>
+  );
 }
 
 export default PreviewCard;

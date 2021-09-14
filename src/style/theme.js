@@ -50,7 +50,6 @@ const theme = createTheme({
       root: {
         height: '100vh',
         display: 'flex',
-        alignItems: 'center',
       },
     },
   },
